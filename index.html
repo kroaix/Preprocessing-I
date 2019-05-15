@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>Katrina Roaix - Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
 
@@ -14,6 +14,93 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <h1>Katrina Roaix</h1>
+      <nav>
+        <a href="#">Introduction</a>
+        <a href="#">Skills</a>
+        <a href="#">Work History</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <section class="introduction">
+      <div>
+        <img src="img/avatar.jpg" />
+      </div>
+      <div class="intro-content">
+        <h2>Introduction</h2>
+        <p>My passion for coding began at a very young age. When I was 10 I was taught to build my very first computer. It was when I found my mom's HTML and CSS books that my curiousity was piqued.</p>
+        <p>After years of self-learning I went to <a href="https://www.fullsail.edu/" target="_blank">Full Sail University</a> for my Bachelor of Science in Web Design and Development - I graduated in 2016. Throughout my schooling I sought out as many opportunities as I could to learn more. I still learned on my own time, I redesigned logos, as well as designing and developing websites.</p>
+        <p>Following my graduation I did a freelance web development intensive bootcamp through <a href="https://www.codecademy.com/" target="_blank">Codecademy</a> where I received a credential in 2017. Today I am a student at <a href="https://lambdaschool.com/" target="_blank">Lambda School</a> doing a bootcamp for Full Stack Web Development.</p>
+        <div class="button"><button><a href="#contact">Contact Me</a></button></div>
+      </div>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Front-End</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Less</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Back-End</h3>
+          <ul>
+            <li>Express</li>
+            <li>Node.js</li>
+            <li>JSON</li>
+            <li>SQL</li>
+            <li>Web API</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li>Git Version Control</li>
+            <li>Responsive Design</li>
+            <li>Debugging</li>
+            <li>CLI</li>
+            <li>Dev Tools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Work History</h2>
+      <table>
+        <tr>
+          <th><h3>Company</h3></th>
+          <th><h3>Title</h3></th>
+          <th><h3>Years</h3></th>
+        </tr>
+        <tr>
+          <td><p>Cablevision</p></td>
+          <td><p>Technical Support Representative</p></td>
+          <td><p>2014 - 2015</p></td>
+        </tr>
+        <tr>
+          <td><p>Imavex</p></td>
+          <td><p>Content Management Specialist</p></td>
+          <td><p>2016 - 2017</p></td>
+        </tr>
+      </table>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" name="firstname" placeholder="First Name"><br />
+        <input type="text" name="lastname" placeholder="Last Name"><br />
+        <textarea name="comment" placeholder="Type your message here."></textarea><br />
+        <div class="button"><button><a href="">Submit</a></button></div>
+      </form>
+    </section>
+    <footer>&copy; kroaix 2019</footer>
+  </div>  
 </body>
 </html>
