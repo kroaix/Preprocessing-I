@@ -52,8 +52,158 @@ table {
 * {
     box-sizing: border-box;
 }
+@link-color: grey;
+@link-color-hover: lighten(@link-color, 10%);
+@font: sans-serif;
 
-html, body {
-    height: 100%;
+.flex{
+	display: flex;
+	align-items: center;
 }
-
+.full-width{
+	width: 100%;
+}
+html, body {
+	height: 100%;
+	font-size: 16px;
+	font-family: @font;
+}
+.container{
+  width: 900px;
+  margin: 0 auto;
+	padding-top: 20px;
+	header{
+		.flex();
+		justify-content: space-between;
+		nav{
+			a{
+				margin: 0 10px;
+			}
+		}
+	}
+	section{
+		margin: 30px 0;
+	}
+	h1, h2, h3, p{
+		margin: 10px 0;
+	}
+	p{
+		line-height: 1.2;
+	}
+	h1{
+		font-size: 2em;
+	}
+	h2{
+		font-size: 1.6em;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted grey;
+	}
+	h3{
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	a{
+		text-decoration: none;
+		color: @link-color;
+	}
+	a:hover{
+		color: @link-color-hover;
+	}
+	.introduction{
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.intro-content{
+		margin-left: 20px;
+			h2{
+				margin-top: 0px;
+			}
+			@media only screen and (max-width: 500px) {
+				.intro-content{
+					margin-left: 0;
+				}
+			}
+		}	
+	}
+	img{
+		width: 350px;
+	}
+	button{
+		border-radius: 5px;
+		color: white;
+		background-color: grey;
+		padding: 10px 15px;
+		font-size: 1em;
+		a{
+			color: white;
+		}
+		:hover{
+			color: white;
+		}
+	}
+	.skills{
+		.flex();
+		justify-content: space-around;
+		text-align: center;
+	}
+	ul{
+		padding-top: 5px;
+		li{
+			margin: 10px;
+		}
+	}
+	form{
+		.full-width();
+		input[type=text], textarea{
+			width: 100%;
+			margin: 5px 0;
+			font-size: 1em;
+			padding-left: 5px;
+		}
+		input{
+			height: 30px;
+		}
+		textarea{
+			height: 100px;
+		}
+	}
+	table{
+		.full-width();
+		th{
+			background-color: #eee;
+			text-align: left;
+			border-top: 1px solid lightgrey;
+			border-bottom: 1px solid lightgrey;
+		}
+		th, td{
+			padding-left: 10px;
+		}
+	}
+	footer{
+		height: 100px;
+		text-align: center;
+		margin-top: 20px;
+	}
+	@media only screen and (max-width: 500px) {
+			max-width: 450px;
+		header, .introduction, .skills{
+			flex-direction: column;
+		}
+		img{
+			margin-bottom: 30px;
+			border-radius: 30px;
+		}
+		.button{
+			margin: 0 auto;
+			text-align: center;
+			font-size: 1.8em;
+		}
+		p, li{
+			font-size: 1.1em;
+		}
+		.full-width{
+			width: 90%;
+		}
+	}
+}
